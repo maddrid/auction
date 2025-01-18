@@ -4,10 +4,10 @@ from lnbits.core.models import User
 from lnbits.decorators import check_user_exists
 from lnbits.helpers import template_renderer
 
-example_ext_generic = APIRouter(tags=["example"])
+auction_ext_generic = APIRouter(tags=["example"])
 
 
-@example_ext_generic.get(
+@auction_ext_generic.get(
     "/", description="Example generic endpoint", response_class=HTMLResponse
 )
 async def index(
