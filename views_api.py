@@ -6,13 +6,10 @@ from fastapi.exceptions import HTTPException
 from lnbits.decorators import WalletTypeInfo, get_key_type
 
 from .models import Example
-
+from . import auction_ext
 # views_api.py is for you API endpoints that could be hit by another service
 
-auction_ext_api = APIRouter(
-    prefix="/api/v1",
-    tags=["example"],
-)
+
 
 
 @auction_ext_api.get("/test/{example_data}", description="Example API endpoint")
